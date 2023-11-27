@@ -15,7 +15,7 @@ arrBtn.push(btnOption1, btnOption2, btnOption3);
 
 // Constructor used to create objects with data about the image, correct option and text
 function GameObject(imageNumber, copyrightText, correctOption, authorInfo) {
-    this.imgPath = `../images/minigame-images/${imageNumber}.jpg`; //The file names are numbers from 1 to 10, that way I have to write less code to get their file path
+    this.imgPath = `images/minigame-images/${imageNumber}.jpg`; //The file names are numbers from 1 to 10, that way I have to write less code to get their file path
     this.copyrightText = copyrightText;
     this.correctOption = correctOption;
     this.authorInfo = authorInfo;
