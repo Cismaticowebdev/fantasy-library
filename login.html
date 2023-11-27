@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Library Registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <script defer src="scripts/form-validation.js"></script>
+</head>
+
+<body class="bg-dark-subtle">
+    <div class="container-fluid bg-secondary-subtle">
+        <header class="row text-center bg-success-subtle p-3">
+            <figure class="col-2">
+                <img src="images/logo.png" class="img-fluid" id="logo" alt="Logo of Fantasy Library">
+            </figure>
+            <h1 class="col-8 mt-2 title">Fantasy Library</h1>
+            <h2 class="col-12 tagline">Discover new worlds!</h2>
+        </header>
+
+        <nav class="row navbar navbar-expand-md sticky-top bg-dark" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a href="index.html" class="navbar-brand">Fantasy Library</a>
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="nav"
+                    aria-label="Toogle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="minigame.html" class="nav-link">Minigame</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="login.html" class="nav-link active" aria-current="page">Sign Up</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <h3 class="row justify-content-center mt-2">Sign up form</h3>
+
+        <form class="row g-2 m-3 justify-content-around" id="myForm">
+            <div class="col-10 col-sm-8 col-md-6 col-xl-5">
+                <div class="form-floating mb-4">
+                    <input type="text" id="username" class="form-control" placeholder="username" minlength="4"
+                        maxlength="16" pattern="^[A-Za-z0-9]*$" required>
+                    <label for="username" class="form-label">Username*</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="email" id="email" class="form-control" placeholder="example@example.com" required>
+                    <label for="email" class="form-label">Email*</label>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="form-floating">
+                        <input type="password" id="password" class="form-control" placeholder="password" minlength="8"
+                            maxlength="20" pattern="^[A-Za-z0-9]*$" required>
+                        <label for="password" class="form-label">Password*</label>
+                    </div>
+                    <button id="btn-pass1" class="btn-pass-hidden input-group-text btn btn-outline-dark"><i
+                            class="bi bi-eye-fill"></i></button>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="form-floating">
+                        <input type="password" id="passwordConfirmation" class="form-control" placeholder="password"
+                            minlength="8" maxlength="20" pattern="^[A-Za-z0-9]*$" required>
+                        <label for="passwordConfirmation" class="form-label">Confirm password*</label>
+                    </div>
+                    <button id="btn-pass2" class="btn-pass-hidden input-group-text btn btn-outline-dark"><i
+                            class="bi bi-eye-fill"></i></button>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="tel" id="telephone" class="form-control" placeholder="telephone number"
+                        pattern="^[0-9]*$">
+                    <label for="telephone" class="form-label">Telephone number</label>
+                </div>
+                <div class="form-check mb-4">
+                    <input type="checkbox" id="subscribe" class="form-check-input">
+                    <label for="subscribe" class="form-check-label">Check this box if you would like to receive emails
+                        with the best deals!</label>
+                </div>
+                <small class="d-block">All the fields marked with * are required</small>
+                <input type="submit" class="btn btn-primary col-5 mt-3" id="formBtn">
+            </div>
+            <div class="col-10 col-sm-8 col-md-5 col-xl-4">
+                <p class="mb-4"><b>Username</b> can include letters and numbers. No special characters. 4-16 characters
+                    long.
+                </p>
+                <p class="mb-4"><b>Email</b> should be valid, you will have to activate your account later.</p>
+                <p class="mb-3"><b>Password</b> must be between 8-20 characters long. Must have at least one upper and
+                    lower case letter and
+                    a number. </p>
+            </div>
+        </form>
+
+        <footer class="row mt-5 pb-2 text-center">
+            <p>Website made by Alberto Rueda, <a href="https://www.ncirl.ie"
+                    class="nci-link link-offset-2-hover link-offset-1 link-success">NCI</a> student, Web Design and
+                Client Side Scripting module.</p>
+            <figure>
+                <a href="https://github.com/Cismaticowebdev"><img src="images/github-mark.svg" id="githubLogo"
+                        alt="Github logo"></a>
+            </figure>
+        </footer>
+
+    </div>
+</body>
+
+</html>

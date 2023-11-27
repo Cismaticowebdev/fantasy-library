@@ -1,0 +1,155 @@
+/* font-face is used to get the fonts from the files in the folder fonts */
+@font-face {
+    font-family: "Macondo Swash Caps";
+    src: url("../fonts/macondo-swash-caps/MacondoSwashCaps-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Merienda";
+    src: url("../fonts/merienda/Merienda-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("../fonts/inter/Inter-VariableFont_slnt\,wght.ttf");
+}
+
+/* Apply the font Inter to every element in the web. For elements like the title that have different fonts, I changed the font using
+ selectors with higher specificity, like a class selector */
+* {
+    font-family: "Inter", serif;
+}
+
+header {
+    background-image: url("../images/henry-be--Pg63JThyCg-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: azure;
+    text-shadow: 2px 2px black;
+}
+
+.title {
+    font-size: 60px;
+    font-family: "Macondo Swash Caps", serif;
+}
+
+.tagline {
+    font-size: 40px;
+    font-family: "Macondo Swash Caps", serif;
+}
+
+#logo {
+    width: 120px;
+}
+
+.nav-link {
+    font-family: "Merienda", serif;
+}
+
+.navbar-brand {
+    font-family: "Macondo Swash Caps", serif;
+}
+
+h3 {
+    padding: 4px;
+    font-family: "Merienda", serif;
+}
+
+section>.card {
+    padding: 12px;
+    width: 250px;
+    transition: 0.3s; /* Make the transform property be done over 0.3 seconds, to make the transformation smoother */
+}
+
+/* Make the card increase it's size when the mouse is over them */
+section>.card:hover {
+    transform: scale(1.05);
+}
+
+.card-footer {
+    background-color: rgb(190, 239, 195);
+}
+
+/* Changing the position of the text to absolute make in posible to overlay the text on top of the image.
+The display none is used so that the text is not visible initially. The user can toggle the visibility
+of the text clicking on the cards, that's possible using javascript, toggling the display from none 
+to block, on the file landing-page.js */
+.card-text {
+    position: absolute;
+    display: none;
+    font-size: 20px;
+    text-shadow: 1px 1px white;
+}
+
+.card-title {
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.card-subtitle {
+    font-weight: 500;
+}
+
+section {
+    margin: 10px;
+}
+
+#githubLogo {
+    width: 50px;
+}
+
+input:invalid {
+    border: 2px solid red;
+}
+
+input:invalid:required {
+    border: none;
+}
+
+input:valid {
+    border: 2px solid green;
+}
+
+.btn-pass-hidden {
+    border: 2px solid white;
+}
+
+#telephone {
+    border: none;
+}
+
+#subscribe {
+    border: none;
+}
+
+#formBtn {
+    border: none;
+}
+
+#gameImage {
+    min-width: 240px;
+    max-width: 300px;
+}
+
+#copyrightText {
+    font-size: 12px;
+}
+
+.right-answer {
+    background-color: greenyellow;
+}
+
+.wrong-answer {
+    background-color: crimson;
+}
+
+.book {
+    width: 250px;
+    border: 4px solid black;
+    border-radius: 10%;
+}
+
+.rating i {
+    font-size: 26px;
+}
+
