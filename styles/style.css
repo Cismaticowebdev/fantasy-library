@@ -20,6 +20,10 @@
     font-family: "Inter", serif;
 }
 
+body:first-child {
+    filter: contrast(2);
+}
+
 header {
     background-image: url("../images/henry-be--Pg63JThyCg-unsplash.jpg");
     background-repeat: no-repeat;
@@ -53,12 +57,14 @@ header {
 h3 {
     padding: 4px;
     font-family: "Merienda", serif;
+    filter: contrast(2);
 }
 
 section>.card {
     padding: 12px;
     width: 250px;
     transition: 0.3s; /* Make the transform property be done over 0.3 seconds, to make the transformation smoother */
+    filter: contrast(1.1);
 }
 
 /* Make the card increase it's size when the mouse is over them */
@@ -78,6 +84,7 @@ to block, on the file landing-page.js */
     position: absolute;
     display: none;
     font-size: 20px;
+    font-weight: 600;
     text-shadow: 1px 1px white;
 }
 
@@ -92,6 +99,11 @@ to block, on the file landing-page.js */
 
 section {
     margin: 10px;
+}
+
+footer a {
+    font-weight: 600;
+    filter: contrast(2);
 }
 
 #githubLogo {
