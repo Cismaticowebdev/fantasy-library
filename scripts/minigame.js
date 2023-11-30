@@ -1,11 +1,12 @@
-window.addEventListener('load', nextRound);
+window.addEventListener('load', nextRound); // Run the function nextRound() after page is loaded, to generate the image, info, etc
 
+// Those are the minigame buttons with the options (author's names) and the button used the load another round
 const btnOption1 = document.getElementById('btnOption1');
 const btnOption2 = document.getElementById('btnOption2');
 const btnOption3 = document.getElementById('btnOption3');
 const btnNext = document.getElementById('btnNext');
 btnNext.addEventListener('click', nextRound);
-let authorNameCurrentRound = '';
+let authorNameCurrentRound = ''; // This variabled is used to store the current author of the round, so that we can check wich option is the right one
 
 //Array to store the 3 buttons to randomize the position
 const arrBtn = [];
@@ -172,8 +173,9 @@ function shuffleArray(arr) {
     }
 }
 
+// Append the buttons to the html, in the order they are in the array
 function swapBtns() {
-    shuffleArray(arrBtn);
+    shuffleArray(arrBtn); // Randomize the order of the buttons in the array
 
     const btnContainer = document.getElementById('btnContainer');
 
@@ -182,6 +184,7 @@ function swapBtns() {
     }
 }
 
+// Reset buttons color to black at the start of each round
 function resetBtnColors() {
         btnOption1.classList.remove('btn-success');
         btnOption1.classList.remove('btn-danger');
