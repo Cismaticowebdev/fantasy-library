@@ -35,17 +35,7 @@ password.addEventListener('input', function () {
     }
 });
 
-// Check if the password and password confirmation have the same value
-function checkPasswords() {
-    if (password.value === passwordConfirmation.value) {
-        passwordConfirmation.setCustomValidity('');
-        return true;
-    } else {
-        passwordConfirmation.setCustomValidity('Write the same password in both boxes');
-        return false;
-    }
-}
-
+//Event listener used to set a custom error message when the input is wrong (only numbers are allowed)
 telephone.addEventListener('input', function () {
     if (telephone.validity.patternMismatch) {
         telephone.setCustomValidity('Must use only numbers');
@@ -54,13 +44,22 @@ telephone.addEventListener('input', function () {
     }
 });
 
+// Submit button to check that the passwords match
+const formBtn = document.getElementById('formBtn');
+formBtn.addEventListener('click', checkPasswords);
+
 // Event listener on form submit to check that every input is valid before submiting it
 myForm.addEventListener('submit', checkForm);
 
 // Check if the form fields and the passwords are valid, if not, the form won't be submitted and the page won't refresh
 function checkForm(e) {
-    if (!checkFormValidation() || !checkPasswords()) {
+    let formValid = checkFormValidation();
+    let passwordsValid = checkPasswords();
+
+    if (formValid === false || passwordsValid === false) {
         e.preventDefault();
+    } else {
+        e.Submit();
     }
 }
 
@@ -68,6 +67,21 @@ function checkForm(e) {
 function checkFormValidation() {
     if (username.validity.valid && email.validity.valid && password.validity.valid && passwordConfirmation.validity.valid && telephone.validity.valid) {
         return true;
+    }
+}
+
+// Check if the password and password confirmation have the same value
+function checkPasswords() {
+    if (password.value === passwordConfirmation.value) {
+        passwordConfirmation.setCustomValidity('');
+    
+        myForm.removeEventListener('submit', checkForm); // Need to reattach the event listener after running preventDefault()
+        myForm.addEventListener('submit', checkForm);
+        
+        return true;
+    } else {
+        passwordConfirmation.setCustomValidity('Write the same password in both boxes');
+        return false;
     }
 }
 
